@@ -11,7 +11,7 @@
   	</listener>
 	<context-param>
 		<param-name>javax.ws.rs.Application</param-name>
-		<param-value>br.com.senai.aula_rest.config.ApplicationConfig</param-value>
+		<param-value>config.ApplicationConfig</param-value>
 	</context-param>
 	<context-param>
 		<param-name>resteasy.scan</param-name>
