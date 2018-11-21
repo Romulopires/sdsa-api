@@ -10,7 +10,7 @@ public class Turma {
 	private Integer periodo;
 	private Integer semestre;
 	private Integer id_curso;
-	//private Curso curso;
+
 	
 	
 	public Turma() {
@@ -103,11 +103,5 @@ public class Turma {
 		this.id_curso = id_curso;
 	}
 
-//	public Curso getCurso() {
-//		return curso;
-//	}
 
-//	public void setCurso(Curso curso) {
-//		this.curso = curso;
-//	}
 }
