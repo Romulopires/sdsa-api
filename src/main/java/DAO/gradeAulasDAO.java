@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import config.ConnectionDB;
+import entities.Aulas;
 
 public class gradeAulasDAO {
 	
@@ -33,7 +34,7 @@ public class gradeAulasDAO {
 				a.setNomeCurso(rs.getString("nomeCurso"));
 				a.setNomeTurma(rs.getString("nomeTurma"));
 				a.setNomeDisciplina(rs.getString("nomeDisciplina"));
-				a.setId_sala(rs.getInt("id_sala"));
+				a.setId_sala(rs.getInt("id_sala"))	;
 				
 				i = "Sala: "+a.getId_sala()+"º \n Curso: "+a.getNomeCurso()+" \n Turma: "+a.getNomeTurma()+" \n Disc.: "+a.getNomeDisciplina();
 			}
