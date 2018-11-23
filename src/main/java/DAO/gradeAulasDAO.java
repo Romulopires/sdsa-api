@@ -16,8 +16,7 @@ public class gradeAulasDAO {
 		con = ConnectionDB.getConnection();
 	}
 	
-	public String listarTabela(int colaborador, int dia_semana, int periodo){
-		String i = "";
+	public Aulas listarTabela(int colaborador, int dia_semana, int periodo){
 		String sql = "SELECT a.id_sala, t.nome AS nomeTurma, c.nome AS nomeCurso, d.nome AS nomeDisciplina "
 				+ " FROM Aulas a INNER JOIN turmas t INNER JOIN cursos c INNER JOIN disciplinas d "
 				+ " ON a.id_turmas = t.id AND a.id_cursos = c.id AND a.id_disciplina = d.id "
@@ -29,22 +28,23 @@ public class gradeAulasDAO {
 			ps.setInt(2, dia_semana);
 			ps.setInt(3, periodo);
 			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
+			if (rs.next()) {
 				Aulas a = new Aulas();
 				a.setNomeCurso(rs.getString("nomeCurso"));
 				a.setNomeTurma(rs.getString("nomeTurma"));
 				a.setNomeDisciplina(rs.getString("nomeDisciplina"));
 				a.setId_sala(rs.getInt("id_sala"))	;
+				return a;
 				
-				i = "Sala: "+a.getId_sala()+"º \n Curso: "+a.getNomeCurso()+" \n Turma: "+a.getNomeTurma()+" \n Disc.: "+a.getNomeDisciplina();
 			}
+			
 			
 			
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		return i;
+		return null;
 	}
 	
 }

@@ -7,6 +7,9 @@ public class Aulas {
 	private String turma;
 	private String disciplina;
 	private Integer id_sala;
+	private String nomeCurso;
+	private String nomeTurma;
+	private String nomeDisciplina;
 	
 	public Aulas() {
 		// TODO Auto-generated constructor stub
@@ -51,6 +54,32 @@ public class Aulas {
 	public void setId_sala(Integer id_sala) {
 		this.id_sala = id_sala;
 	}
+
+	public String getNomeCurso() {
+		return nomeCurso;
+	}
+
+	public void setNomeCurso(String nomeCurso) {
+		this.nomeCurso = nomeCurso;
+	}
+
+	public String getNomeTurma() {
+		return nomeTurma;
+	}
+
+	public void setNomeTurma(String nomeTurma) {
+		this.nomeTurma = nomeTurma;
+	}
+
+	public String getNomeDisciplina() {
+		return nomeDisciplina;
+	}
+
+	public void setNomeDisciplina(String nomeDisciplina) {
+		this.nomeDisciplina = nomeDisciplina;
+	}
+	
+	
 
 
 	
