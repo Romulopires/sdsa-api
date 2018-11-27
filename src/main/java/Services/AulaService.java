@@ -25,7 +25,7 @@ public class AulaService {
 	}
 	
 	@POST
-	@Path("/aula")
+	@Path("/por-filtro")
 	public Aulas getAula(Filtro filtro) {
 		gDao.listarTabela(filtro.getColaborador(), filtro.getDia_semana(), filtro.getPeriodo());
 		return getAula(filtro);                                                                                                                           

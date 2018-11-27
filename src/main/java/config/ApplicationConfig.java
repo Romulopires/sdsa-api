@@ -5,6 +5,7 @@ import java.util.Set;
 
 import javax.ws.rs.core.Application;
 
+import Services.AulaService;
 import Services.ProfessorService;
 import Services.TurmaService;
 
@@ -15,6 +16,7 @@ public class ApplicationConfig  extends Application{
 		Set<Class<?>> recursos = new HashSet<>();
 		recursos.add(ProfessorService.class);
 		recursos.add(TurmaService.class);
+		recursos.add(AulaService.class);
 		return recursos;
 		
 	} 
