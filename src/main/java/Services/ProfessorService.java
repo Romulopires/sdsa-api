@@ -29,6 +29,7 @@ public class ProfessorService {
 	@Path("/todos")
 	public List<ClasseGenerica> buscarTodos(){
 		try {
+			System.out.println("sdsa-api Info: Obteve lista de professor");
 			return pDao.listar();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

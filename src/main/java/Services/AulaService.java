@@ -27,8 +27,9 @@ public class AulaService {
 	@POST
 	@Path("/por-filtro")
 	public Aulas getAula(Filtro filtro) {
-
-		
+		System.out.println("sdsa-api Info: Chamou aula para filtro Professor: "
+				+ filtro.getColaborador() + " Dia semana: " + filtro.getDia_semana()
+				+ " Periodo: " + filtro.getPeriodo());
 		return gDao.listarTabela(filtro.getColaborador(), filtro.getDia_semana(), filtro.getPeriodo());
 		                                                                                                                           
 	}
