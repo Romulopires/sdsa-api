@@ -34,6 +34,12 @@ public class AulaService {
 		                                                                                                                           
 	}
 	
+	@POST
+	@Path("/por-turma")
+	public Aulas getAulaTurma(Filtro filtro) {
+		return gDao.gradeAulasTurma(filtro.getTurma(), filtro.getDia_semana(), filtro.getPeriodo());
+	}
+	
 	
 
 }

@@ -4,6 +4,7 @@ public class Filtro {
 	private Integer colaborador; 
 	private Integer dia_semana; 
 	private Integer periodo;
+	private Integer turma;
 	
 	
 	public Filtro() {
@@ -32,6 +33,15 @@ public class Filtro {
 	public void setPeriodo(Integer periodo) {
 		this.periodo = periodo;
 	}
+
+	public Integer getTurma() {
+		return turma;
+	}
+
+	public void setTurma(Integer turma) {
+		this.turma = turma;
+	}
+	
 	
 	
 

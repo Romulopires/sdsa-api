@@ -47,4 +47,36 @@ public class gradeAulasDAO {
 		return null;
 	}
 	
+	
+	public Aulas gradeAulasTurma(int turma, int dia_semana, int periodo) {
+		String sql = "SELECT a.id_sala, t.nome AS nomeTurma, c.nome AS nomeCurso, d.nome AS nomeDisciplina "
+				+ " FROM Aulas a INNER JOIN turmas t INNER JOIN cursos c INNER JOIN disciplinas d "
+				+ " ON a.id_turmas = t.id AND a.id_cursos = c.id AND a.id_disciplina = d.id "
+				+ " WHERE a.id_turma = ? AND a.dia_semana = ? AND a.periodo = ? ";
+		
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, turma);
+			ps.setInt(2, dia_semana);
+			ps.setInt(3, periodo);
+			ResultSet rs = ps.executeQuery();
+			if (rs.next()) {
+				Aulas a = new Aulas();
+				a.setNomeCurso(rs.getString("nomeCurso"));
+				a.setNomeDisciplina(rs.getString("nomeDisciplina"));
+				a.setId_sala(rs.getInt("id_sala"))	;
+				return a;
+				
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	
+	
 }
