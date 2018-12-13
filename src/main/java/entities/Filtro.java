@@ -5,7 +5,7 @@ public class Filtro {
 	private Integer dia_semana; 
 	private Integer periodo;
 	private Integer turma;
-	
+	private Integer horario;
 	
 	public Filtro() {
 		// TODO Auto-generated constructor stub
@@ -40,6 +40,14 @@ public class Filtro {
 
 	public void setTurma(Integer turma) {
 		this.turma = turma;
+	}
+
+	public Integer getHorario() {
+		return horario;
+	}
+
+	public void setHorario(Integer horario) {
+		this.horario = horario;
 	}
 	
 	

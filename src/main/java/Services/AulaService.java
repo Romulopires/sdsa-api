@@ -30,14 +30,14 @@ public class AulaService {
 		System.out.println("sdsa-api Info: Chamou aula para filtro Professor: "
 				+ filtro.getColaborador() + " Dia semana: " + filtro.getDia_semana()
 				+ " Periodo: " + filtro.getPeriodo());
-		return gDao.listarTabela(filtro.getColaborador(), filtro.getDia_semana(), filtro.getPeriodo());
+		return gDao.listarTabela(filtro.getColaborador(), filtro.getDia_semana(), filtro.getPeriodo(), filtro.getHorario());
 		                                                                                                                           
 	}
 	
 	@POST
 	@Path("/por-turma")
 	public Aulas getAulaTurma(Filtro filtro) {
-		return gDao.gradeAulasTurma(filtro.getTurma(), filtro.getDia_semana(), filtro.getPeriodo());
+		return gDao.gradeAulasTurma(filtro.getTurma(), filtro.getDia_semana(), filtro.getPeriodo(), filtro.getHorario()	);
 	}
 	
 	
